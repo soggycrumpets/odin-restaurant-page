@@ -1,3 +1,4 @@
+import { buildElement } from "./util";
 
 export function buildHomePage(parentElement) {
     parentElement.appendChild(buildGreeting());
@@ -32,14 +33,4 @@ function buildHours() {
     hours.appendChild(buildElement("p", paragraph));
 
     return hours;
-}
-
-function buildLocation() {
-
-}
-
-function buildElement(elementType, text) {
-    const element = document.createElement(elementType); 
-    element.textContent = text;
-    return element;
 }
