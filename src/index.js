@@ -1,3 +1,14 @@
 import "./style.css"
+import { buildHomePage } from "./home";
 
-console.log("ahoy!");
+const parentElement = document.querySelector("#content");
+
+buildHomePage(parentElement);
+explode();
+
+function explode() {
+    const children = document.querySelectorAll("#contant>"); 
+    for (child of children) {
+        child.remove();
+    }
+}
