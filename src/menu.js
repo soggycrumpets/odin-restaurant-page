@@ -28,7 +28,7 @@ export function buildMenuPage(parentElement) {
     parentElement.appendChild(buildMenuItem(name, description, price));
 
     name = "Eggplant Delight";
-    description = "One of our most popular dishes, we promise thatthis purple mound of delectibility will not disappoint"
+    description = "One of our most popular souffles, we promise that this purple mound of delectibility will not disappoint"
     price = "$5.49"
     parentElement.appendChild(buildMenuItem(name, description, price));
 
