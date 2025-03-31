@@ -26,9 +26,7 @@ function initButtons() {
     function setButtonEventListener(button, pageBuilder) {
         button.addEventListener("click", () => {
             clearPage();
-            if (pageBuilder) {
-                pageBuilder(contentElement);
-            }
+            pageBuilder(contentElement);
             setActive(button);
         });
     }

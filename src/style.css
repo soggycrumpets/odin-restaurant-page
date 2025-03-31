@@ -38,6 +38,7 @@ nav>button.button-active {
     background-color: rgb(84, 210, 30);
 }
 
+
 #content {
     background-color: var(--brown);
     padding: 40px;
@@ -51,7 +52,6 @@ nav>button.button-active {
     border-radius: 50px;
     min-height: 80vh;
     margin: 40px;
-
 }
 
 #content>* {
@@ -66,17 +66,19 @@ nav>button.button-active {
     padding: 10px;
 }
 
+
 #content>h1 {
     background-color: rgb(255, 119, 0);
 }
 
 #content>h1, h2, h3 {
-    width: 80%;
+    width: 90%;
 }
 
 h1, h2, h3, p {
     margin: 10px;
     text-align: center; 
+    word-break: break-word;
 }
 
 #content>*.new-section {

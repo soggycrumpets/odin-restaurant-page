@@ -17,7 +17,7 @@ export function buildAboutPage(parentElement) {
     name = "Bobby Souffle";
     occupation = "Chef";
     phone = "000-000-0001"
-    email = "ClarissaCarrot@fakemail.lie";
+    email = "BobbySouffle@fakemail.lie";
     parentElement.appendChild(buildStaffMember(name, occupation, phone, email));
 
     name = "Artur Soufflayers";
