@@ -4,6 +4,7 @@ export function buildHomePage(parentElement) {
     parentElement.appendChild(buildGreeting());
     parentElement.appendChild(buildIntroduction());
     parentElement.appendChild(buildHours());
+    parentElement.appendChild(buildLocation());
 }
 
 function buildGreeting() {
@@ -33,4 +34,16 @@ function buildHours() {
     hours.appendChild(buildElement("p", paragraph));
 
     return hours;
+}
+
+function buildLocation() {
+    const location = buildElement("div");    
+
+    const heading = "Location";
+    const paragraph = "1234 Carrot Lain, Greensville, New Souffland";
+
+    location.appendChild(buildElement("h2", heading));
+    location.appendChild(buildElement("p", paragraph));
+
+    return location;
 }
