@@ -37,7 +37,7 @@ export function buildMenuPage(parentElement) {
     parentElement.appendChild(buildElement("h1", "Sides", "new-section"));
 
     name = "Carrots";
-    description = "The freshness of our carrots pair perfectly with our main dishes."
+    description = "The freshness of our carrots pairs perfectly with our main dishes."
     price = "$1.99"
     parentElement.appendChild(buildMenuItem(name, description, price));
 

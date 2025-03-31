@@ -1,7 +1,7 @@
 import { buildElement } from "./util";
 
 export function buildAboutPage(parentElement) {
-    parentElement.appendChild(buildElement("h1", "Our Staff"));
+    parentElement.appendChild(buildElement("h1", "The Carrot Crew"));
 
     let name;
     let occupation;
@@ -9,13 +9,13 @@ export function buildAboutPage(parentElement) {
     let email;
 
     name = "Clarissa Carrot";
-    occupation = "Owner"
+    occupation = "Head Chef"
     phone = "000-000-0000";
     email = "ClarissaCarrot@fakemail.lie";
     parentElement.appendChild(buildStaffMember(name, occupation, phone, email));
 
     name = "Bobby Souffle";
-    occupation = "Chef";
+    occupation = "Sous Chef";
     phone = "000-000-0001"
     email = "BobbySouffle@fakemail.lie";
     parentElement.appendChild(buildStaffMember(name, occupation, phone, email));
