@@ -23,10 +23,10 @@ function initButtons() {
         activeButton = button;
     }
 
-    function setButtonEventListener(button, pageBuilder) {
+    function setButtonEventListener(button, buildPage) {
         button.addEventListener("click", () => {
             clearPage();
-            pageBuilder(contentElement);
+            buildPage(contentElement);
             setActive(button);
         });
     }
