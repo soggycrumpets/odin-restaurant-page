@@ -18,7 +18,7 @@ export function buildHomePage(parentElement) {
     
     // Location
     heading = "Location";
-    text = "1234 Carrot Lain, Greensville, New Souffland";
+    text = "1234 Carrot Lane, Greensville, New Souffland";
     parentElement.appendChild(buildSection(heading, text));
 
 }
