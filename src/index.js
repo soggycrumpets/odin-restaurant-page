@@ -1,44 +1,43 @@
 import "./style.css"
 import { buildHomePage } from "./home";
-
+import { buildMenuPage } from "./menu";
+import { buildAboutPage } from "./about";
 const contentElement = document.querySelector("#content");
-const buttons = (function () {
+
+
+// Initialize content
+buildHomePage(contentElement);
+initButtons();
+
+
+
+function initButtons() {
     const home = document.querySelector("#home-button");
     const menu = document.querySelector("#menu-button");
     const about = document.querySelector("#about-button");
-
     let activeButton = home;
 
-    let setActive = function (button) {
+    function setActive(button) {
         activeButton.removeAttribute("class", "button-active");
         button.setAttribute("class", "button-active");
         activeButton = button;
     }
 
-    return { home, menu, about, setActive};
-})();
+    function setButtonEventListener(button, pageBuilder) {
+        button.addEventListener("click", () => {
+            clearPage();
+            if (pageBuilder) {
+                pageBuilder(contentElement);
+            }
+            setActive(button);
+        });
+    }
 
-
-
-buildHomePage(contentElement);
-buttons.setActive(buttons.home);
-
-buttons.home.addEventListener("click", () => {
-    clearPage();
-    buildHomePage(contentElement);
-    buttons.setActive(buttons.home);
-});
-
-buttons.menu.addEventListener("click", () => {
-    clearPage();
-    buttons.setActive(buttons.menu);
-});
-
-buttons.about.addEventListener("click", () => {
-    clearPage();
-    buttons.setActive(buttons.about);
-});
-
+    setActive(activeButton);
+    setButtonEventListener(home, buildHomePage);
+    setButtonEventListener(menu, buildMenuPage);
+    setButtonEventListener(about, buildAboutPage);
+}
 
 function clearPage() {
     const childElements = document.querySelectorAll("#content>*");

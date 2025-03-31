@@ -7,7 +7,7 @@ export function buildHomePage(parentElement) {
 }
 
 function buildGreeting() {
-    const heading = buildElement("h1", "Welcome to Carrot Souffle Castle!");    
+    const heading = buildElement("h1", "Welcome to Carrot Souffle Castle");    
     return heading;
 }
 

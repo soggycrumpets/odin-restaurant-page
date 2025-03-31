@@ -40,8 +40,9 @@ nav>button.button-active {
 
 #content {
     background-color: var(--brown);
-    padding: 40px ;
+    padding: 40px;
     width: 80%;
+    min-width: 400px;
     max-width: 800px;
     display: flex;
     flex-direction: column;
@@ -54,6 +55,9 @@ nav>button.button-active {
 }
 
 #content>* {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 60%;
     border: solid 4px green;
     background-color: orange;
@@ -63,10 +67,22 @@ nav>button.button-active {
 }
 
 #content>h1 {
+    background-color: rgb(255, 119, 0);
+}
+
+#content>h1, h2, h3 {
     width: 80%;
 }
 
 h1, h2, h3, p {
     margin: 10px;
     text-align: center; 
+}
+
+#content>*.new-section {
+    margin-top: 100px;
+}
+
+#content>*.foo {
+    border-radius: 100%;
 }
