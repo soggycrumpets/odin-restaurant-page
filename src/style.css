@@ -50,7 +50,6 @@ nav>button.button-active {
     align-items: center;
     border: solid 8px black;
     border-radius: 50px;
-    min-height: 80vh;
     margin: 40px;
 }
 
